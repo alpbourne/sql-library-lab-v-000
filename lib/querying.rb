@@ -33,7 +33,7 @@ def select_series_title_with_most_human_characters
   "SELECT series.title
     FROM series
     INNER JOIN characters
-    ON series.id = characters.series_id 
+    ON series.id = characters.series_id
     WHERE characters.species = 'human'
     GROUP BY series.title
     ORDER BY COUNT(species) DESC
@@ -46,5 +46,5 @@ def select_character_names_and_number_of_books_they_are_in
     INNER JOIN character_books
     ON characters.id = character_books.character_id
     GROUP BY characters.name
-    ORDER BY COUNT(character_books.character_id) DESC"
+    ORDER BY COUNT(character_books.character_id) DESC;"
 end
